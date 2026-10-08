@@ -29,7 +29,7 @@ st.caption(
 
 @st.cache_data
 def load_cap_history() -> pd.DataFrame:
-    df = pd.read_csv("data/price_cap_history.csv", parse_dates=["period_start", "period_end"])
+    df = pd.read_csv("data/data/price_cap_history.csv", parse_dates=["period_start", "period_end"])
     df["label"] = df["period_start"].dt.strftime("%b %Y")
     return df
 
